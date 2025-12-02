@@ -1,0 +1,149 @@
+/* Estilos para el formulario de login */
+.login-box {
+    max-width: 1800px;
+    margin: 0 1px;
+    box-sizing: border-box;
+    border: #797979;
+    border-radius: 10px;
+    background: transparent;
+    z-index: 1;
+    margin: 20px;
+    margin-right: 45px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: transparent;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+    z-index: 1;
+}
+
+.login-box .user-box i {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 10px;
+    color: #CAAB55;
+}
+
+.form-container {
+    position: relative;
+    z-index: 1;
+}
+
+.login-box .user-box input,
+.login-box .user-box select,
+.login-box .user-box textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    appearance: auto;
+    color: #797979;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input.error-border,
+.login-box .user-box select.error-border,
+.login-box .user-box textarea.error-border {
+    border-bottom: 1px solid #881912 !important;
+}
+
+.login-box .user-box label.error {
+    color: #881912;
+    font-size: 12px;
+}
+
+input:focus:not(:placeholder-shown) {
+    background-color: transparent;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label,
+.login-box .user-box select:focus~label,
+.login-box .user-box textarea:focus~label {
+    top: -25px;
+    left: 0;
+    color: #CAAB55;
+    font-size: 12px;
+}
+
+/* Estilos adicionales para mejorar la presentación */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Asegurar que los elementos sr-only sean accesibles pero invisibles */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-box {
+        margin: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Estilos para el navbar */
+.menu-opt {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.menu-mob {
+    padding: 10px 15px;
+}
+
+/* Asegurar que los menús desplegables en desktop tengan sombra */
+@media (min-width: 1024px) {
+    .lg\:group-hover\:block {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+}
+
+/* Estilos para links del navbar */
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+}

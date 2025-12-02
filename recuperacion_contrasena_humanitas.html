@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Universidad Humanitas - Recuperar Contraseña</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de Tailwind para colores personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hgold: '#CAAB55',
+                        hwine: '#881912',
+                        hgray: '#4B5563'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar -->
+    <nav
+        class="bg-white z-[50] min-h-[86px] lg:min-h-[163px] w-full fixed top-0 left-0 flex justify-center items-center shadow-md">
+        <div class="flex justify-center items-center p-3 w-full max-w-4xl lg:max-w-[1200px] z-[48]">
+            <a href="/">
+                <img src="pagesImages/logotipo-desde-vino.webp" fetchpriority="high" width="536" loading="eager"
+                    height="91" alt="Logo Universidad Humanitas" class="w-[280px] md:w-[536px] h-auto" />
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="flex flex-col w-full items-center mx-auto pt-[88px] lg:pt-[163px] justify-center">
+        <!-- Banner Section -->
+        <section class="w-full flex flex-col items-center justify-center mb-8">
+            <img src="pagesImages/Banner-usuario-LEON-querer-es-poder.webp"
+                alt="En la Plataforma Humanitas tienes todo lo que necesitas en unos cuántos clics."
+                class="border border-gray-400 w-full hidden md:block">
+            <div class="aspect-square max-w-[500px] max-h-[500px]">
+                <img src="pagesImages/banner-usuario-movil-querer-es-poder-campana-leon.webp" alt="Querer es Poder"
+                    class="w-full md:hidden object-cover border border-gray-400">
+            </div>
+        </section>
+
+        <h1 class="sr-only">Plataforma Universidad Humanitas</h1>
+
+        <div class="flex flex-col w-full">
+            <p class="text-hgold font-serif text-[38px] md:text-[36px] text-center">Plataforma Humanitas: todo a un
+                clic.</p>
+        </div>
+
+        <!-- Formularios -->
+        <div class="flex flex-col justify-center w-full mb-4 items-center">
+            <!-- Recuperar Contraseña -->
+            <div class="flex items-center justify-center flex-col my-8 px-8 md:px-0 w-full max-w-[500px]">
+                <h2 class="mt-4 mb-1 text-black text-2xl">Recuperar contraseña</h2>
+                <p class="mt-4 mb-1 text-black text-lg">Escribe tu matrícula y elige el campus</p>
+                <section class="login-box form-container border w-full border-black relative z-10">
+                    <form action="#" method="post" novalidate>
+                        <div>
+                            <div class="user-box w-[95%]">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="txtUsuario" id="usuario" required maxlength="12"
+                                    class="focus:ring-0 ml-[25px]">
+                                <label class="ml-[25px]">Matrícula/Usuario</label>
+                            </div>
+                            <span class="text-hwine text-xs hidden error-message ml-[25px] block mb-2"></span>
+                            <div class="user-box w-[95%]">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <select id="campus" name="cboCampus"
+                                    class="focus:ring-0 ml-[25px] rounded-none text-[#ff4444]" required>
+                                    <option class="text-[#797979]">Selecciona una opción</option>
+                                    <option class="text-[#797979]" value="CANCUN">Cancún</option>
+                                    <option class="text-[#797979]" value="CHIHUAHUA">Chihuahua</option>
+                                    <option class="text-[#797979]" value="DF">Colonia Del Valle CDMX</option>
+                                    <option class="text-[#797979]" value="CUERNAVACA">Cuernavaca</option>
+                                    <option class="text-[#797979]" value="GDL">Guadalajara</option>
+                                    <option class="text-[#797979]" value="REYES">Los Reyes la Paz</option>
+                                    <option class="text-[#797979]" value="MERIDA">Mérida</option>
+                                    <option class="text-[#797979]" value="MONTERREY">Monterrey</option>
+                                    <option class="text-[#797979]" value="PRESAMADIN">Presa Madín</option>
+                                    <option class="text-[#797979]" value="QUERETARO">Querétaro</option>
+                                    <option class="text-[#797979]" value="SANTAFE">Santa Fe CDMX</option>
+                                    <option class="text-[#797979]" value="TIJUANA">Tijuana</option>
+                                    <option class="text-[#797979]" value="VIRTUAL">Virtual</option>
+                                </select>
+                                <label class="ml-[25px]"
+                                    style="top: -25px;left: 0;color: #CAAB55;font-size: 12px;">Campus</label>
+                            </div>
+                            <span class="text-hwine text-xs hidden error-message ml-[25px] block mb-2"></span>
+                            <div class="flex flex-col items-center justify-center">
+                                <button type="submit"
+                                    class="hover:bg-hwine rounded-none w-[120px] text-white m-4 py-2 px-4 bg-hgold hover:text-white transition duration-300 ease-in-out">
+                                    Aceptar
+                                </button>
+                                <a class="text-xs text-gray-500" href="acceso.html">
+                                    <strong>Volver</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        class="flex flex-col justify-center items-center w-full border border-t-gray-400 border-b-transparent mb-16">
+        <!-- Sección de canales de comunicación -->
+        <div class="flex flex-col justify-center items-center border border-b-gray-400 w-full bg-gray-200">
+            <div class="px-4">
+                <p class="text-[38px] md:text-[42px] mt-14 text-center text-gray-600 font-serif">Humanitas te ofrece
+                    más.
+                </p>
+                <h2 class="text-hgray text-center text-2xl md:text-[28px] mb-6">Conoce nuestros canales de comunicación.
+                </h2>
+            </div>
+            <br>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-4 max-w-4xl lg:max-w-6xl">
+                <div class="mb-6">
+                    <div class="flex items-center justify-center">
+                        <a href="https://capitel.humanitas.edu.mx/" target="_blank">
+                            <img src="pagesImages/40-capitel-aprendizaje.webp" width="362" height="362"
+                                alt="Portada de la Revista Capitel de Humanitas" class="object-cover" loading="lazy">
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="text-2xl text-gray-600 w-full text-center">Revista Capitel</h3>
+                    <p class="text-lg text-gray-700 w-full text-center">Conoce más de nuestra revista<br> y súmate a
+                        nuestros<br> eventos.
+                    </p>
+                </div>
+                <div class="section mb-6">
+                    <div class="flex items-center justify-center">
+                        <a href="https://trascendi.humanitas.edu.mx/" target="_blank">
+                            <img src="pagesImages/trascendi_bann.webp" width="362" height="362"
+                                alt="Banner del Canal Trascendi con entrevistas inspiradoras" class="object-cover"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="text-2xl text-gray-600 w-full text-center">Canal Trascendi</h3>
+                    <p class="text-lg text-gray-700 w-full text-center">Más de 100 entrevistas que te<br> motivarán a
+                        ser
+                        mejor persona
+                        y<br> trascender positivamente.</p>
+                </div>
+                <div class="section mb-6">
+                    <div class="flex items-center justify-center">
+                        <a href="https://legatum.humanitas.edu.mx/" target="_blank">
+                            <img src="pagesImages/legatum.webp" width="362" height="362"
+                                alt="Banner representativo de Legatum, conferencias para aprender y crecer"
+                                class="object-cover" loading="lazy">
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="text-2xl text-gray-600 w-full text-center">Conferencias Legatum</h3>
+                    <p class="text-lg text-gray-700 w-full text-center">Ponencias en un formato que <br> te cautivará.
+                        Nunca
+                        se deja de<br>
+                        aprender.</p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- Logo y redes sociales -->
+        <div class="flex flex-col w-full justify-center">
+            <div class="flex items-center justify-center w-full mb-10 lg:mb-2">
+                <img src="pagesImages/logo-humanitas-black.webp" width="325" height="47" alt="logo-humanitas"
+                    loading="lazy" class="inline-block align-middle mt-10" />
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full px-4">
+                <!-- Redes sociales izquierda -->
+                <div class="order-1 flex justify-center items-center w-full">
+                    <a href="https://capitel.humanitas.edu.mx/" target="_blank">
+                        <img src="pagesImages/capitel-f.png" alt="Capitel" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5 py-1" />
+                    </a>
+                    <a href="https://trascendi.humanitas.edu.mx/" target="_blank">
+                        <img src="pagesImages/trascendi-f.png" alt="Trascendi" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://legatum.humanitas.edu.mx/" target="_blank">
+                        <img src="pagesImages/legatum.png" alt="Legatum" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://www.threads.net/@universidadhumanitas" target="_blank">
+                        <img src="pagesImages/threats-icons.png" alt="Threads" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://www.linkedin.com/school/universidad-humanitas/mycompany/" target="_blank">
+                        <img src="pagesImages/link-icons.png" alt="Linkedin" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5215611422526" target="_blank">
+                        <img src="pagesImages/whats-icons.png" alt="WhatsApp" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                </div>
+
+                <!-- Copyright centro -->
+                <div class="order-3 lg:order-2 mt-10 lg:mt-0 flex flex-col items-center justify-center w-full">
+                    <p class="text-xs w-full text-center">Estudios con Reconocimiento de Validez Oficial. SEP</p>
+                    <p class="text-xs w-full text-center">Universidad Humanitas © Copyright. Todos los derechos
+                        reservados.
+                        2025</p>
+                </div>
+
+                <!-- Redes sociales derecha -->
+                <div class="order-2 lg:order-3 flex justify-center items-center w-full">
+                    <a href="https://www.facebook.com/universidadhumanitas/" target="_blank">
+                        <img src="pagesImages/face-icons.png" alt="Facebook" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5 py-1" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCRUp4nYBNpyOCcCD5ryyi2Q" target="_blank">
+                        <img src="pagesImages/youtube-icons.png" alt="Youtube" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://www.instagram.com/universidadhumanitas/" target="_blank">
+                        <img src="pagesImages/insta-icons.png" alt="Instagram" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://www.tiktok.com/@uhumanitasoficial?lang=es" target="_blank">
+                        <img src="pagesImages/tik-icons.png" alt="TikTok" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://twitter.com/UHumanitas" target="_blank">
+                        <img src="pagesImages/x-icons.png" alt="Twitter" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                    <a href="https://www.pinterest.com.mx/uhumanitas/" target="_blank">
+                        <img src="pagesImages/pin.png" alt="Pinterest" width="40" height="40" loading="lazy"
+                            class="h-10 w-10 mx-1.5" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>
